@@ -13,7 +13,7 @@ class jurnal extends CI_Controller
     public function index()
     {
 
-        $data["title"] = "List Data jurnal";
+        $data["title"] = "List Data Jurnal";
         //ambil fungsi getAll untuk menampilkan semua data jurnal
         $data["data_jurnal"] = $this->jurnal_model->getAll();
         //load view header.php pada folder views/templates
