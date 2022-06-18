@@ -1,6 +1,6 @@
 <div class="container pt-5 mb-5">
     <!-- Heading -->
-    <div class="p-2 bg-light mb-3 border">
+    <div class="p-2 bg-light mb-3 border rounded">
         <h1 class=""><?= $title ?></h1>
         <!-- Breadcrumb -->
         <nav class="d-flex">

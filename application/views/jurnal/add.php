@@ -1,6 +1,6 @@
 <div class="container pt-5">
     <!-- Heading -->
-    <div class="p-2 bg-light mb-3 border">
+    <div class="p-2 bg-light mb-3 border rounded">
         <h1 class=""><?= $title ?></h1>
         <!-- Breadcrumb -->
         <nav class="d-flex">
@@ -27,7 +27,7 @@
                         <div class="col-sm-10">
                             <input type="text" class="form-control" id="judul" name="judul" value="<?= set_value('judul'); ?>">
                             <small class="text-danger">
-                                <?php echo form_error('jurnal') ?>
+                                <?php echo form_error('judul') ?>
                             </small>
                         </div>
                     </div>

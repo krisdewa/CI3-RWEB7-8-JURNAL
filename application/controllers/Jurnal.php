@@ -7,8 +7,16 @@ class jurnal extends CI_Controller
     {
         parent::__construct();
         $this->load->model("jurnal_model"); //load model jurnal
+        
+        // Cek session id dan nama
+        // Untuk mencegah user masuk kedalam dashboard tanpa login
+        if(!$this->session->userdata('id') && !$this->session->userdata('nama')){
+            $this->session->set_flashdata('login', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+            Hayo mau ngapain, login dulu brey !!!
+            </div>' );
+        redirect('/');
+        }
     }
-
     //method pertama yang akan di eksekusi
     public function index()
     {
@@ -37,8 +45,8 @@ class jurnal extends CI_Controller
             Data jurnal berhasil disimpan. 
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>'
-          )
-          ;
+            )
+            ;
             redirect("jurnal");
         }
 
